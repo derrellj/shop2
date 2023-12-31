@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>TyNails</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/pages.css' %}" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="listGroup">
+        <li class="logo">
+          <a class="linkLogo" href="{% url 'pages:home' %}">TyNails</a>
+        </li>
+        <li class="listItem">
+          <a class="linkItem" href="{% url 'pages:home' %}">Home</a>
+        </li>
+        <li class="listItem">
+          <a class="linkItem" href="{% url 'pages:about' %}">About</a>
+        </li>
+        <li class="listItem">
+          <a class="linkItem" href="{% url 'pages:services' %}">Services</a>
+        </li>
+      </ul>
+    </nav>
+    {% block content %}{% endblock content %}
+  </body>
+</html>

@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>TyNails</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/pages.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pages.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}" />
   </head>
   <body>
     <nav class="navbar">
@@ -19,10 +20,10 @@
           <a class="linkItem" href="{% url 'pages:home' %}">Home</a>
         </li>
         <li class="listItem">
-          <a class="linkItem" href="{% url 'pages:about' %}">About</a>
+          <a class="linkItem" href="{% url 'about:about' %}">About</a>
         </li>
         <li class="listItem">
-          <a class="linkItem" href="{% url 'pages:services' %}">Services</a>
+          <a class="linkItem" href="{% url 'services:serve' %}">Services</a>
         </li>
       </ul>
     </nav>

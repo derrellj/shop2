@@ -11,13 +11,12 @@ services:
     depends_on:
       - db
   db:
-    image: postgres
+    image: postgres:13
     volumes:
-      - ./data/db:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data/
     environment:
-      POSTGRES_DB: gshit
-      POSTGRES_USER: derrellj
-      POSTGRES_PASSWORD: idk45107
+      - "POSTGRES_HOST_AUTH_METHOD=trust"
 
 volumes:
   postgres_data:
+

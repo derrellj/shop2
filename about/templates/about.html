@@ -1,0 +1,15 @@
+{% extends "_base.html" %} {% block content %}
+<div class="container_about">
+  <li>{{ post.title }}</li>
+
+  <div class="list_container">
+    {% for post in about_post_list %}
+    <ul class='about_group'>
+      <li class='about_item'>{{ post.introdcution }}</li>
+      <li class='about_item'> {{ post.location }}</li>
+      <li class='about_item' >{{ post.services }}</li>
+    </ul>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}

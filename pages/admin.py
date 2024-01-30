@@ -2,4 +2,9 @@ from django.contrib import admin
 
 from .models import HomePost
 
-admin.site.register(HomePost)
+
+class PageModelAdmin(admin.ModelAdmin):
+    list_display = ["artist", "art", "info"]
+
+
+admin.site.register(HomePost, PageModelAdmin)

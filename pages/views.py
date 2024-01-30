@@ -1,14 +1,8 @@
-from django.views.generic import TemplateView, ListView
+from django.views.generic import ListView
 from .models import HomePost
 
 
 class HomePage(ListView):
     model = HomePost
     template_name = "home.html"
-
-
-class AboutPage(TemplateView):
-    template_name = "about.html"
-
-class ServicesPage(TemplateView):
-    template_name = "services.html"
+    context_object_name = "home_post"
